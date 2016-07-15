@@ -1,6 +1,6 @@
 {
   "name": "@volebonet/eslint-config-volebonet",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "ESLint rules for volebo.net",
   "main": "index.js",
   "scripts": {
