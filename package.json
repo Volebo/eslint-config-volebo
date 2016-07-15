@@ -1,14 +1,14 @@
 {
-  "name": "@volebonet/eslint-config",
+  "name": "@volebonet/eslint-config-volebonet",
   "version": "0.0.1",
   "description": "ESLint rules for volebo.net",
-  "main": ".eslintrc.js",
+  "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VoleboNet/eslint-config.git"
+    "url": "git+https://github.com/VoleboNet/eslint-config-volebonet.git"
   },
   "keywords": [
     "styleguide",
@@ -30,7 +30,7 @@
   ],
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/VoleboNet/auth/issues"
+    "url": "https://github.com/VoleboNet/eslint-config-volebonet/issues"
   },
-  "homepage": "https://github.com/VoleboNet/eslint-config",
+  "homepage": "https://github.com/VoleboNet/eslint-config-volebonet"
 }
