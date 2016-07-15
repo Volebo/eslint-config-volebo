@@ -28,7 +28,7 @@
       "email": "maxkoryukov@gmail.com"
     }
   ],
-  "license": "GPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/VoleboNet/eslint-config-volebonet/issues"
   },
