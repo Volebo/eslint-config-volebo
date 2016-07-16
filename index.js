@@ -51,6 +51,7 @@ exports = module.exports = {
 		"no-extra-parens": ["error", "all", { "nestedBinaryExpressions": false }],
 		"no-cond-assign": ["error"],
 		"strict": ["error", "global"],
+		"no-process-exit": ["error"],
 
 		/* CODE STYLE */
 		"indent": ["warn", "tab"],
