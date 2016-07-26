@@ -16,6 +16,18 @@ npm install eslint-config-volebonet
 Just paste this to the `.eslintrc.js` in the root of your project:
 
 ```javascript
+const path = require('path');
+
+exports = module.exports = {
+	"extends": [
+        path.join(__dirname, 'node_modules', 'eslint-config-volebonet', 'index.js')
+	]
+}
+```
+
+This version is much better, but it requires to install `eslint-config-volebonet` **globally** (for details, read comments to [this issue](https://github.com/eslint/eslint/issues/3458))
+
+```javascript
 exports = module.exports = {
 	"extends": [
 		"volebonet"
