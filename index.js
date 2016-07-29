@@ -56,5 +56,5 @@ exports = module.exports = {
 		"indent": ["warn", "tab"],
 	},
 
-	"quiet": true,
-}
+	"quiet": true
+};
