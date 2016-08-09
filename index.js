@@ -43,17 +43,29 @@ exports = module.exports = {
 	"rules": {
 		// Override any settings from the "parent" configuration
 		"comma-dangle" : ["error", "only-multiline"],
-		"no-unused-vars" : ["warn", { "argsIgnorePattern": "next" }],
-		"curly" : ["error"],
-		"eqeqeq": ["error"],
 		"no-process-exit": ["error"],
 		"no-path-concat": ["error"],
 		"no-extra-parens": ["error", "all", { "nestedBinaryExpressions": false }],
 		"no-cond-assign": ["error"],
-		"strict": ["error", "global"],
 
 		/* CODE STYLE */
 		"indent": ["warn", "tab"],
+		"curly": ["warn"],
+		"new-cap": ["warn"],
+
+		/* STATIC SECURITY */
+		"eqeqeq": ["error"],
+		"guard-for-in": ["error"],
+		"no-use-before-define": ["error", { "functions": true, "classes": true }],
+		"no-caller": ["error"],
+		"no-empty": ["error", { "allowEmptyCatch": false }],
+		"no-empty-function": ["error"],
+
+		"no-native-reassign": ["error"],
+		"no-extend-native": ["error"],
+		"strict": ["error", "global"],
+		"no-unused-vars" : ["warn", { "argsIgnorePattern": "next" }],
+		"no-bitwise": ["error"],
 	},
 
 	"quiet": true
