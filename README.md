@@ -1,14 +1,14 @@
-# eslint-config-volebonet
+# eslint-config-volebo
 
-[![npm version](https://img.shields.io/npm/v/eslint-config-volebonet.svg)](https://www.npmjs.com/package/eslint-config-volebonet)
-[![npm downloads](https://img.shields.io/npm/dm/eslint-config-volebonet.svg)](https://www.npmjs.com/package/eslint-config-volebonet)
+[![npm version](https://img.shields.io/npm/v/eslint-config-volebo.svg)](https://www.npmjs.com/package/eslint-config-volebo)
+[![npm downloads](https://img.shields.io/npm/dm/eslint-config-volebo.svg)](https://www.npmjs.com/package/eslint-config-volebo)
 
 Common style guide for all Volebo.Net projects
 
 ## Install
 
 ```shell
-npm install eslint-config-volebonet
+npm install eslint-config-volebo
 ```
 
 ## Usage
@@ -22,18 +22,18 @@ exports = module.exports = {
 	"extends": [
         path.join(__dirname,
         	'node_modules',
-        	'eslint-config-volebonet',
+        	'eslint-config-volebo',
         	'index.js')
 	]
 }
 ```
 
-This version is much better, but it requires to install `eslint-config-volebonet` **globally** (for details, read comments to [this issue](https://github.com/eslint/eslint/issues/3458))
+This version is much better, but it requires to install `eslint-config-volebo` **globally** (for details, read comments to [this issue](https://github.com/eslint/eslint/issues/3458))
 
 ```javascript
 exports = module.exports = {
 	"extends": [
-		"volebonet"
+		"volebo"
 	],
 }
 ```
