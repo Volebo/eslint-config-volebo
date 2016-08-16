@@ -60,6 +60,7 @@ exports = module.exports = {
 		"no-caller": ["error"],
 		"no-empty": ["error", { "allowEmptyCatch": false }],
 		"no-empty-function": ["error"],
+		"no-irregular-whitespace": ["error", { "skipComments": true }],
 
 		"no-native-reassign": ["error"],
 		"no-extend-native": ["error"],
