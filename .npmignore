@@ -4,6 +4,7 @@ test/
 node_modules/
 coverage/
 CONTRIBUTING.md
+README.md
 HEADER
 .bithoundrc
 .editorconfig
@@ -14,3 +15,5 @@ HEADER
 .npmignore
 .travis.yml
 gulpfile.js
+
+test.sh

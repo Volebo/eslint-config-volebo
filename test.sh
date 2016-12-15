@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-eslint -c index.js test/example.01.good.js
+ESLINT="eslint -c index.js"
+
+$ESLINT test/example.01.good.js
+
+exit 0

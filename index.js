@@ -42,31 +42,58 @@ exports = module.exports = {
 
 	"rules": {
 		// Override any settings from the "parent" configuration
-		"comma-dangle" : ["error", "only-multiline"],
+		"comma-dangle" : ["error", "only-multiline"],  // TODO: review this rule
 		"no-process-exit": ["error"],
-		"no-path-concat": ["error"],
-		"no-extra-parens": ["error", "all", { "nestedBinaryExpressions": false }],
-		"no-cond-assign": ["error"],
 
 		/* CODE STYLE */
+		"dot-notation": "off",
+
 		"indent": ["warn", "tab"],
-		"curly": ["warn"],
 		"new-cap": ["warn"],
+		"no-extra-parens": ["warn", "all", { "nestedBinaryExpressions": false }],
+		"curly": "error",
+		"no-trailing-spaces": "error",
+		"no-irregular-whitespace": ["error", { "skipComments": true }],
+		"no-new-object": "error",
 
 		/* STATIC SECURITY */
-		"eqeqeq": ["error"],
-		"guard-for-in": ["error"],
-		"no-use-before-define": ["error", { "functions": true, "classes": true }],
+		"strict": ["error", "global"],
+
+		"no-cond-assign": "error",
+		"eqeqeq": "error",
+		"no-bitwise": "error",
+		"guard-for-in": "error",
+		"no-eq-null": "error",
+		"no-unreachable": "error",
+		"no-eval": "error",
+		"no-loop-func": "error",
+		"no-iterator": "error",
+		"no-multi-str": "error", // use \n instead!
+		"valid-typeof": "error",
+		"no-proto": "error",
+		"no-script-url": "error",
+		"require-yield": "error",
+
+		"no-native-reassign": "error",
+		"no-extend-native": "error",
+
+		"max-params": ["warn", { "max": 4 }],
+		"complexity": ["warn", { "max": 20 }],
+		"max-depth": ["warn", { "max": 5 }],
+
+		"no-path-concat": ["error"],
+
 		"no-caller": ["error"],
 		"no-empty": ["error", { "allowEmptyCatch": false }],
 		"no-empty-function": ["error"],
-		"no-irregular-whitespace": ["error", { "skipComments": true }],
+		"no-new": ["error"],
 
-		"no-native-reassign": ["error"],
-		"no-extend-native": ["error"],
-		"strict": ["error", "global"],
-		"no-unused-vars" : ["warn", { "argsIgnorePattern": "next" }],
-		"no-bitwise": ["error"],
+		// variables definitions
+		"no-use-before-define": ["error", { "functions": true, "classes": true }],
+		"no-undef": ["error", { "typeof": true }],
+		"no-unused-vars" : ["error", { "args": "all", "argsIgnorePattern": "(next|^_unused)" }],
+
+
 	},
 
 	"quiet": true
