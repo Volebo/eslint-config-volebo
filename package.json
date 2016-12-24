@@ -1,10 +1,10 @@
 {
   "name": "eslint-config-volebo",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "ESLint rules for volebo.net",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "./test.sh"
   },
   "repository": {
     "type": "git",

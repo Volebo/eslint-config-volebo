@@ -54,7 +54,7 @@ exports = module.exports = {
 		"new-cap": ["warn"],
 
 		/* STATIC SECURITY */
-		"eqeqeq": ["error"],
+		"eqeqeq": ["error", "always"],
 		"guard-for-in": ["error"],
 		"no-use-before-define": ["error", { "functions": true, "classes": true }],
 		"no-caller": ["error"],
