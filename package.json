@@ -35,6 +35,6 @@
   },
   "homepage": "https://github.com/volebo/eslint-config-volebo",
   "peerDependencies": {
-    "eslint": "3.x"
+    "eslint": "4.x"
   }
 }

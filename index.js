@@ -96,6 +96,4 @@ exports = module.exports = {
 		"no-undef": ["error", { "typeof": true }],
 		"no-unused-vars" : ["error", { "args": "all", "argsIgnorePattern": "(next|^_unused)" }],
 	},
-
-	"quiet": true
-};
+}
