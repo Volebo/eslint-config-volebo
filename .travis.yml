@@ -47,9 +47,12 @@ deploy:
   provider: npm
   api_key:
     secure: "J/Kq1wrIT4Wx5aqNJjztWnC98t79lU5aTPqCvkd5HlRljsRXM3B4hAFy0X64KYVKYpqMdLFMbjQeqCusa77HBDJaFqxTdqMJmsjBy/cUGrp4CeGXzXZcWQRXbRyEYj3OX1sPmeOfx73nj/0Suyqhro6DzKpI23uOl9hGrOch7zNV0VtrfQsmZt4Vp0nugvFJBReWaqGBHgyeelRAa+RDdsGvrMx3F/9uP5VP3x2oX+vmQvC4PRDxUHlyIqzo8igKp9fmRYh1HVH6wIetyxMuFibNKVsE+h8bfozNMUPt+H33UXxvKC+HKM8q96exw9/3a8knOgwu8hMCDWhNquxqKvY1rrK/YvEcPmPN8mcpj52z+sUUbK4ROVE+3AL0RIH+suFmMiqAs3+MDA91wXsM84ai8tOw4D9KPplrmR55pMbCNMy8ekkxCaP6lS6dEnN534ai12iOGbQY0U87F4+dTEq72Bf7oQDJuNJl7P14mbdmznp7G+FQ9io0nV5x8eAKxBL0KVsNN+Iqh4jKf752Dp7MdMpzwksN+oQ8OpsD28bGk9Ju7JVJmKHJ1z6d5d/OvGSj6rRsRiEvykN7vjH12qhS+zwKMjrtZmaAMHOWPB4vUETlcCskoWkQ0lbMQD4vv4KUuxEwYSmwhZ71znaJkYDATJNF7vRwJdo72hMI8q4="
-  email:
-    secure: "bVw9Mt7IueCnweH+rB37/errP+E/lZwZlCIFFtQIyd+6AYFWywyP63yk0+NngvZ122sYOyIIJiRbFyJVpsw+0p6nGzv8hn2H/OQm6BCw2kZdCwpApR6YJPbPeMX6XNLMkaMEoP7Mo0mqjpVz9V/W61KUtdnVW3mdyEma5iX+Pu3JWzRVTS3OazgtAQXj0mlGk2KmVHbYrTkvN4NQq3EuOlz5Dqze38dALfFsKFxtKdhZvXvLzgAdQzqXIPYyfsOz7Se2seqdZxhIrAZ2KP5KLm1uzuwJKbnRCHqA2rJ4EqYh4338Unj0h2AC7qrlHPY7Y7o8WAKVhhuB4YFIRoreaq5R3wEz3Yfmr0pTbiHUQYwqy195MLXcC0pQe75fXsv38Fyc6G+rdJjLFQOmFI0sXRAlX/ErOHHea40c/+ffQGgsENaK2sufqaG4zCW4RLW38YICbPO70u7/GHEAs5t22i9cPf9Vjr68SCeBwr1CpP0VGE4smYVJz0V8adRok6SVVJbRmGq5HEKjtDiuN0wFiOD4617w1wdkpKTFNGjthJH0rgtEr5Ui74z5AdjRmtHrG6cVjQY9vM2ArAU7JJ0y1qSCY4qd+MZWnEjm0rTiC1E1STv5DAhhKqrg/ItgUymRmrEOqWLFNTI/WzAYGuw4agnXH9gkqM4Xrsn+07lpdPA="
+  email: dev@volebo.net
   on:
     tags: true
     node_js: 6
     repo: volebo/eslint-config-volebo
+
+after_deploy:
+  # Send notification to Slack:
+  - curl -sL https://raw.githubusercontent.com/volebo/dev/master/scripts/im/slack-publish.sh | bash -s -
