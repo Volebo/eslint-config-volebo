@@ -20,11 +20,12 @@ Just paste this to the `.eslintrc.js` in the root of your project:
 const path = require('path');
 
 exports = module.exports = {
-  "extends": [
+  'extends': [
     path.join(__dirname,
       'node_modules',
       'eslint-config-volebo',
-      'index.js')
+      'index.js'
+    )
   ]
 }
 ```
@@ -33,8 +34,8 @@ This version is much better, but it requires to install `eslint-config-volebo` *
 
 ```javascript
 exports = module.exports = {
-  "extends": [
-    "volebo"
+  'extends': [
+    'volebo',
   ],
 }
 ```
