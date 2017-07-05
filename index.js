@@ -92,7 +92,7 @@ exports = module.exports = {
 		"no-var": "warn",
 		"prefer-const": ["warn", { /*"ignoreReadBeforeAssign" : false */ }],
 		"no-const-assign": "warn",
-		"no-use-before-define": ["error", { "functions": true, "classes": true }],
+		"no-use-before-define": ["error", { "functions": false, "classes": true }],
 		"no-undef": ["error", { "typeof": true }],
 		"no-unused-vars" : ["error", { "args": "all", "argsIgnorePattern": "(next|^_unused)" }],
 	},
