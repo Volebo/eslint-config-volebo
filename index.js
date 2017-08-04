@@ -96,4 +96,20 @@ exports = module.exports = {
 		"no-undef": ["error", { "typeof": true }],
 		"no-unused-vars" : ["error", { "args": "all", "argsIgnorePattern": "(next|^_unused)" }],
 	},
+
+	'overrides': [
+		{
+			'files': [
+				'**/*.test.js',
+				'**/*.spec.js'
+			],
+
+			'env': {
+				'mocha': true,
+			},
+			'globals': {
+				'expect': true,
+			}
+		}
+	],
 }
