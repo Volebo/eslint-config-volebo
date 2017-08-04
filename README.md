@@ -17,7 +17,7 @@ npm install eslint-config-volebo -S
 Just paste this to the `.eslintrc.js` in the root of your project:
 
 ```javascript
-const path = require('path');
+const path = require('path')
 
 exports = module.exports = {
   'extends': [
@@ -30,7 +30,8 @@ exports = module.exports = {
 }
 ```
 
-This version is much better, but it requires to install `eslint-config-volebo` **globally** (for details, read comments to [this issue](https://github.com/eslint/eslint/issues/3458))
+This version is much better, but it requires to install `eslint-config-volebo` **globally**
+(for details, read comments to [this issue](https://github.com/eslint/eslint/issues/3458))
 
 ```javascript
 exports = module.exports = {
