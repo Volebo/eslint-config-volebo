@@ -26,75 +26,75 @@ SOFTWARE.
 */
 
 exports = module.exports = {
-	"extends": [
-		"eslint:recommended"
-		//"./node_modules/coding-standard/eslintDefaults.js",
+	'extends': [
+		'eslint:recommended'
+		//'./node_modules/coding-standard/eslintDefaults.js',
 		// Override eslintDefaults.js
-		//"./node_modules/coding-standard/.eslintrc-es6",
+		//'./node_modules/coding-standard/.eslintrc-es6',
 		// Override .eslintrc-es6
-		//"./node_modules/coding-standard/.eslintrc-jsx",
+		//'./node_modules/coding-standard/.eslintrc-jsx',
 	],
 
-	"env": {
-		"node": true,
-		"es6": true,
+	'env': {
+		'node': true,
+		'es6': true,
 	},
 
-	"rules": {
-		// Override any settings from the "parent" configuration
-		"comma-dangle" : ["error", "only-multiline"],  // TODO: review this rule
-		"no-process-exit": ["error"],
+	'rules': {
+		// Override any settings from the 'parent' configuration
+		'comma-dangle' : ['error', 'only-multiline'],  // TODO: review this rule
+		'no-process-exit': ['error'],
 
 		/* CODE STYLE */
-		"dot-notation": "off",
+		'dot-notation': 'off',
 
-		"indent": ["warn", "tab"],
-		"new-cap": ["warn"],
-		"no-extra-parens": ["warn", "all", { "nestedBinaryExpressions": false }],
-		"curly": "error",
-		"no-trailing-spaces": "error",
-		"no-irregular-whitespace": ["error", { "skipComments": true }],
-		"no-new-object": "error",
+		'indent': ['warn', 'tab'],
+		'new-cap': ['warn'],
+		'no-extra-parens': ['warn', 'all', { 'nestedBinaryExpressions': false }],
+		'curly': 'error',
+		'no-trailing-spaces': 'error',
+		'no-irregular-whitespace': ['error', { 'skipComments': true }],
+		'no-new-object': 'error',
 
 		/* STATIC SECURITY */
-		"strict": ["error", "global"],
+		'strict': ['error', 'global'],
 
-		"no-cond-assign": "error",
-		"eqeqeq": "error",
-		"no-bitwise": "error",
-		"guard-for-in": "error",
-		"no-eq-null": "error",
-		"no-unreachable": "error",
-		"no-eval": "error",
-		"no-loop-func": "error",
-		"no-iterator": "error",
-		"no-multi-str": "error", // use \n instead!
-		"valid-typeof": "error",
-		"no-proto": "error",
-		"no-script-url": "error",
-		"require-yield": "error",
+		'no-cond-assign': 'error',
+		'eqeqeq': 'error',
+		'no-bitwise': 'error',
+		'guard-for-in': 'error',
+		'no-eq-null': 'error',
+		'no-unreachable': 'error',
+		'no-eval': 'error',
+		'no-loop-func': 'error',
+		'no-iterator': 'error',
+		'no-multi-str': 'error', // use \n instead!
+		'valid-typeof': 'error',
+		'no-proto': 'error',
+		'no-script-url': 'error',
+		'require-yield': 'error',
 
-		"no-native-reassign": "error",
-		"no-extend-native": "error",
+		'no-native-reassign': 'error',
+		'no-extend-native': 'error',
 
-		"max-params": ["warn", { "max": 4 }],
-		"complexity": ["warn", { "max": 20 }],
-		"max-depth": ["warn", { "max": 5 }],
+		'max-params': ['warn', { 'max': 4 }],
+		'complexity': ['warn', { 'max': 20 }],
+		'max-depth': ['warn', { 'max': 5 }],
 
-		"no-path-concat": ["error"],
+		'no-path-concat': ['error'],
 
-		"no-caller": ["error"],
-		"no-empty": ["error", { "allowEmptyCatch": false }],
-		"no-empty-function": ["error"],
-		"no-new": ["error"],
+		'no-caller': ['error'],
+		'no-empty': ['error', { 'allowEmptyCatch': false }],
+		'no-empty-function': ['error'],
+		'no-new': ['error'],
 
 		// variables definitions
-		"no-var": "warn",
-		"prefer-const": ["warn", { /*"ignoreReadBeforeAssign" : false */ }],
-		"no-const-assign": "warn",
-		"no-use-before-define": ["error", { "functions": false, "classes": true }],
-		"no-undef": ["error", { "typeof": true }],
-		"no-unused-vars" : ["error", { "args": "all", "argsIgnorePattern": "(next|^_unused)" }],
+		'no-var': 'warn',
+		'prefer-const': ['warn', { /*'ignoreReadBeforeAssign' : false */ }],
+		'no-const-assign': 'warn',
+		'no-use-before-define': ['error', { 'functions': false, 'classes': true }],
+		'no-undef': ['error', { 'typeof': true }],
+		'no-unused-vars' : ['error', { 'args': 'all', 'argsIgnorePattern': '(next|^_unused)' }],
 	},
 
 	'overrides': [
