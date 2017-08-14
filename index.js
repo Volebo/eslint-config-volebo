@@ -101,7 +101,12 @@ exports = module.exports = {
 		'no-const-assign': 'warn',
 		'no-use-before-define': ['error', { 'functions': false, 'classes': true }],
 		'no-undef': ['error', { 'typeof': true }],
-		'no-unused-vars' : ['error', { 'args': 'all', 'argsIgnorePattern': '(next|^_unused)' }],
+
+		// will ignore unused arguments, but skip args:
+		// `_` - lodash placeholder
+		// `next` - express callback
+		// `_unused_XXX` - explicitly unused named variables
+		'no-unused-vars' : ['error', { 'args': 'all', 'argsIgnorePattern': '(_|next|^_unused)' }],
 	},
 
 	'overrides': [
