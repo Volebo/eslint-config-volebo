@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-volebo",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "ESLint rules for volebo.net",
   "license": "MIT",
   "private": false,
@@ -43,10 +43,8 @@
   "scripts": {
     "test": "./tests/test.sh"
   },
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "peerDependencies": {
     "eslint": "6.x"
   }
