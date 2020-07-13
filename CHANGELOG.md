@@ -38,8 +38,8 @@
 
 ### Added
 
-- `semi` - don't use `;`
-- `quotes` - singlequotes
+- `semi` - don't use `;` (see volebo/eslint-config-volebo#7)
+- `quotes` - singlequotes (fix volebo/eslint-config-volebo#5)
 - `no-console` - why do you want to print to console?
 - `no-plusplus` - be careful with this
 
