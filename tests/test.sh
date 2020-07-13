@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ################################################################################
 #                                                                              #
 # db    db  .8888.  dP     888888b 8888ba   .8888.     d8b   db 888888b d8888P #
@@ -26,77 +28,12 @@
 #
 ################################################################################
 
-# =========================================
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-# =========================================
+ESLINT="`npm bin`/eslint -c index.js"
 
-# place per-project settings here
+$ESLINT tests/example.01.good.js
 
-# =========================================
-# common part
-# =========================================
+# ==============================================================================
 
-# hmm, GLOBAL stuff
-.DS_Store
-thumbs.db
-Thumbs.db
-!.gitkeep
+# $ESLINT tests/example.02.bad.js > $
 
-# tests/coverage results
-tests/e2e/reports/
-selenium-debug.log
-coverage/
-lib-cov/
-.nyc_output/
-
-# PRIVATE files
-.npmrc
-.node_repl_history
-# local env files
-.env
-.env.local
-.env.*.local
-
-# parcel cache
-.cache/
-
-# dependencies
-.npm
-node_modules/
-npm-cache/
-
-# frameworks
-.serverless/
-.ionic/
-.sass-cache/
-bower_components/
-
-# compiled output
-dist/
-build/
-
-# temporary shit
-tmp/
-$RECYCLE.BIN/
-
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-logs/
-log/
-*.log
-testem.log
-
-# Editor directories and files
-.idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-*.sublime-project
-*.sublime-workspace
-
-# =========================================
+exit 0

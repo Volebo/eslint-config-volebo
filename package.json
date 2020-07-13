@@ -2,14 +2,30 @@
   "name": "eslint-config-volebo",
   "version": "2.3.3",
   "description": "ESLint rules for volebo.net",
-  "main": "index.js",
-  "scripts": {
-    "test": "./test.sh"
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   },
+  "author": {
+    "name": "volebo",
+    "url": "https://dev.volebo.net"
+  },
+  "contributors": [
+    {
+      "name": "Maksim Koryukov",
+      "email": "maxkoryukov@volebo.net",
+      "url": "https://www.npmjs.com/~maxkoryukov"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/volebo/eslint-config-volebo.git"
+    "url": "git+https://gitlab.com/volebo/eslint-config-volebo.git"
   },
+  "bugs": {
+    "url": "https://gitlab.com/volebo/eslint-config-volebo/issues"
+  },
+  "homepage": "https://gitlab.com/volebo/eslint-config-volebo",
   "keywords": [
     "styleguide",
     "config",
@@ -19,22 +35,19 @@
     "volebo.net",
     "volebo"
   ],
-  "author": {
-    "name": "Volebo",
-    "url": "http://volebo.net"
+  "engines": {
+    "node": ">=6.0.0",
+    "npm": ">=5.0.0"
   },
-  "contributors": [
-    {
-      "name": "Koryukov Maksim",
-      "email": "maxkoryukov@gmail.com"
-    }
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/volebo/eslint-config-volebo/issues"
+  "main": "index.js",
+  "scripts": {
+    "test": "./tests/test.sh"
   },
-  "homepage": "https://github.com/volebo/eslint-config-volebo",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
   "peerDependencies": {
-    "eslint": "4.x"
+    "eslint": "6.x"
   }
 }

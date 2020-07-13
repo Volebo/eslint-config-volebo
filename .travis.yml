@@ -8,32 +8,33 @@
 #    YP     `888P'  88888P 888888P 888888'  `888P'  88 VP    8P 888888P   dP   #
 #                                                                              #
 ################################################################################
-
-# ESLint rules for volebo.net
 #
-# Copyright (C) 2016-2017 Volebo <dev@volebo.net>
-# Copyright (C) 2016-2017 Maksim Koryukov <maxkoryukov@gmail.com>
+# Copyright (C) 2016-2020 Volebo <dev@volebo.net>
+# Copyright (C) 2016-2020 Maksim Koryukov <maxkoryukov@volebo.net>
 #
 # This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+# it under the terms of the MIT License, attached to this software package.
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 #
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the MIT License along with this
+# program. If not, see <https://opensource.org/licenses/MIT>.
+#
+# http://spdx.org/licenses/MIT
+#
+################################################################################
+
 
 sudo: false
 
 language: node_js
 
 node_js:
-  - 4
-  - 6
+  - 10
+  - 12
+  - 14
 
 cache:
   directories:
@@ -46,11 +47,8 @@ install:
   - npm install -g npm
   - npm install -g eslint
   - npm install
-  # - npm install -g codecov
-  # - npm install -g bithound
 
 script:
-  # - gulp build
   # - npm run lint
   - npm test
 
@@ -61,7 +59,7 @@ deploy:
   email: dev@volebo.net
   on:
     tags: true
-    node_js: 6
+    node_js: 14
     repo: volebo/eslint-config-volebo
 
 after_deploy:
