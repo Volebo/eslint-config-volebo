@@ -1,3 +1,4 @@
+/*
 ################################################################################
 #                                                                              #
 # db    db  .8888.  dP     888888b 8888ba   .8888.     d8b   db 888888b d8888P #
@@ -25,44 +26,47 @@
 # http://spdx.org/licenses/MIT
 #
 ################################################################################
+*/
+
+'use strict'
 
 
-sudo: false
+const path = require('path')
 
-language: node_js
+exports = module.exports = {
+	'root': true,
 
-node_js:
-  - 12
-  - 14
-  - 16
-  - 18
+	'env': {
+		node: true
+	},
 
-cache:
-  directories:
-    - node_modules
+	'parserOptions': {
+		// 'parser': 'babel-eslint'
+		'ecmaVersion': 2018,
+	},
 
-before_install:
-  - npm config set spin false
+	'extends': [
+		// 'plugin:vue/essential',
+		// 'volebo',
+		path.join(__dirname, 'index.js'),
+	],
 
-install:
-  - npm install -g npm
-  - npm install -g eslint
-  - npm install
+	'overrides': [
+		{
+			'files': [
+				'**/*.test.js',
+				'**/*.spec.js'
+			],
 
-script:
-  # - npm run lint
-  - npm test
+			'env': {
+				mocha: true
+			},
 
-deploy:
-  provider: npm
-  api_key:
-    secure: "F9qKitO/k8c3VeNRS20pUH9VqisyH8qf2rIumfptiWT3fIVeNC2sZwh9b2acJo7JkovQbDkRj8aatIJ4Xh88Jhs3Y3I7gz2rzfvFpOPYWvggEscIacrH8jCSUd57c1TTbuR7bnjmJk7Z5/HvB4LQpiJ8tc7CWcXBtPOAF6N+46fdt75h9ihQhQLChanqM7pweCrsSPaitiX+YocL8Q6irkcP+1UVXriGxXcHE6VJg1+9UZqACgcHs/MQwBEt06I3kzOFYtak1epUbCDxTpItMynXF9N9rEhzs8UQVmV/9v41lh4WvbTOfjbUnPiZq77mJgPlv4F6Dt3y4ufu61Dk8tYFficEfirkEsvH2UQ6SreUGgEAEChea0+Waysy48nTkDSk5UvMu4+nNITM/tKhk/xKn5es5BUi0mCA+Lowa1E/1TJjffv16KyQ+2MEoD0RV/c3BmuxMwfdxrKOstH1yGhMwUtliOEJ+Rd1ibKcQIiIkfJ0tVUiFOcEnJ+B3v+6oih7A+IfAZYTtMlNUbNvDsfETcF5EgOKlBbcrdFwoXE+U8YvQJs3qejs1EJCXF2Ne0G+WuEPDF2VfvxpklyWMHXPbGjrcxN/uoacI8QB4p2RsO5X2yRiAnzxgRyDuCTb1JBx7yGvJqs2mqJr3UZbfGRsM8zjU1cfOhoTvpQ/3F8="
-  email: dev@volebo.net
-  on:
-    tags: true
-    node_js: 18
-    repo: volebo/eslint-config-volebo
+			'globals': {
+				'filename2suitename': true,
+				'tags': true,
+			},
 
-after_deploy:
-  # Send notification to Slack:
-  - curl -sL https://raw.githubusercontent.com/volebo/dev/master/scripts/im/slack-publish.sh | bash -s -
+		}
+	],
+}

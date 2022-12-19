@@ -1,3 +1,4 @@
+/*
 ################################################################################
 #                                                                              #
 # db    db  .8888.  dP     888888b 8888ba   .8888.     d8b   db 888888b d8888P #
@@ -9,8 +10,10 @@
 #                                                                              #
 ################################################################################
 #
+# DESCRIPTION
+#
 # Copyright (C) 2016-2022 Volebo <dev@volebo.net>
-# Copyright (C) 2016-2022 Maksim Koryukov <maxkoryukov@volebo.net>
+# Copyright (C) 2016-2022 Maksim Koryukov <maxkoryukov@gmail.com>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the MIT License, attached to this software package.
@@ -25,44 +28,25 @@
 # http://spdx.org/licenses/MIT
 #
 ################################################################################
+*/
+
+'use strict'
+
+const chai                         = require('chai')
+// const path                         = require('path')
+// const mh                           = require('@volebo/mocha-helpers')
 
 
-sudo: false
+global.expect = chai.expect
 
-language: node_js
+// global.filename2suitename = mh.filename2suitename
+// global.tags = mh.tags
 
-node_js:
-  - 12
-  - 14
-  - 16
-  - 18
 
-cache:
-  directories:
-    - node_modules
+// const report_path = path.join(
+// 	process.cwd(),
+// 	'tmp',
+// 	'mochawesome-report'
+// )
 
-before_install:
-  - npm config set spin false
-
-install:
-  - npm install -g npm
-  - npm install -g eslint
-  - npm install
-
-script:
-  # - npm run lint
-  - npm test
-
-deploy:
-  provider: npm
-  api_key:
-    secure: "F9qKitO/k8c3VeNRS20pUH9VqisyH8qf2rIumfptiWT3fIVeNC2sZwh9b2acJo7JkovQbDkRj8aatIJ4Xh88Jhs3Y3I7gz2rzfvFpOPYWvggEscIacrH8jCSUd57c1TTbuR7bnjmJk7Z5/HvB4LQpiJ8tc7CWcXBtPOAF6N+46fdt75h9ihQhQLChanqM7pweCrsSPaitiX+YocL8Q6irkcP+1UVXriGxXcHE6VJg1+9UZqACgcHs/MQwBEt06I3kzOFYtak1epUbCDxTpItMynXF9N9rEhzs8UQVmV/9v41lh4WvbTOfjbUnPiZq77mJgPlv4F6Dt3y4ufu61Dk8tYFficEfirkEsvH2UQ6SreUGgEAEChea0+Waysy48nTkDSk5UvMu4+nNITM/tKhk/xKn5es5BUi0mCA+Lowa1E/1TJjffv16KyQ+2MEoD0RV/c3BmuxMwfdxrKOstH1yGhMwUtliOEJ+Rd1ibKcQIiIkfJ0tVUiFOcEnJ+B3v+6oih7A+IfAZYTtMlNUbNvDsfETcF5EgOKlBbcrdFwoXE+U8YvQJs3qejs1EJCXF2Ne0G+WuEPDF2VfvxpklyWMHXPbGjrcxN/uoacI8QB4p2RsO5X2yRiAnzxgRyDuCTb1JBx7yGvJqs2mqJr3UZbfGRsM8zjU1cfOhoTvpQ/3F8="
-  email: dev@volebo.net
-  on:
-    tags: true
-    node_js: 18
-    repo: volebo/eslint-config-volebo
-
-after_deploy:
-  # Send notification to Slack:
-  - curl -sL https://raw.githubusercontent.com/volebo/dev/master/scripts/im/slack-publish.sh | bash -s -
+// process.env.MOCHAWESOME_REPORTDIR = report_path

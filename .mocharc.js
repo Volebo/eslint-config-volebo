@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-
+/*
 ################################################################################
 #                                                                              #
 # db    db  .8888.  dP     888888b 8888ba   .8888.     d8b   db 888888b d8888P #
@@ -11,8 +10,8 @@
 #                                                                              #
 ################################################################################
 #
-# Copyright (C) 2016-2020 Volebo <dev@volebo.net>
-# Copyright (C) 2016-2020 Maksim Koryukov <maxkoryukov@volebo.net>
+# Copyright (C) 2016-2022 Volebo <dev@volebo.net>
+# Copyright (C) 2016-2022 Maksim Koryukov <maxkoryukov@volebo.net>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the MIT License, attached to this software package.
@@ -27,13 +26,37 @@
 # http://spdx.org/licenses/MIT
 #
 ################################################################################
+*/
 
-ESLINT="`npm bin`/eslint -c index.js"
 
-$ESLINT tests/example.01.good.js
+const MOCHA_TIMEOUT_DEFAULT = Number(process.env.MOCHA_TIMEOUT_DEFAULT || 2000)
 
-# ==============================================================================
 
-# $ESLINT tests/example.02.bad.js > $
+module.exports = {
+	reporter: 'list',
+	// reporter: 'spec',
 
-exit 0
+	recursive: true,
+	checkLeaks: true,
+	ui: 'bdd',
+	require: 'tests/bootstrap',
+	extension: [
+		'test.js',
+		'spec.js',
+	],
+	retries: 1,
+
+	diff: true,
+	//opts: './test/mocha.opts',
+	package: './package.json',
+	slow: 75,
+	timeout: MOCHA_TIMEOUT_DEFAULT,
+
+	spec: [
+		'tests/**/*.test.js',
+		// 'src/**/*.test.js',
+		// 'src/**/*.spec.js',
+
+		// 'libs/**/*.test.js',
+	],
+}
