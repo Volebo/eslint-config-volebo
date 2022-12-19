@@ -16,6 +16,7 @@
 [![npm version](https://img.shields.io/npm/v/eslint-config-volebo.svg)](https://www.npmjs.com/package/eslint-config-volebo)
 [![Build Status](https://travis-ci.org/volebo/eslint-config-volebo.svg?branch=master)](https://travis-ci.org/volebo/eslint-config-volebo)
 [![npm downloads](https://img.shields.io/npm/dm/eslint-config-volebo.svg)](https://www.npmjs.com/package/eslint-config-volebo)
+[![Known Vulnerabilities](https://snyk.io/test/github/volebo/eslint-config-volebo/badge.svg)](https://snyk.io/test/github/volebo/eslint-config-volebo)
 
 Common style guide for all Volebo.Net projects
 
@@ -28,6 +29,21 @@ npm install eslint-config-volebo -S
 ## Usage
 
 Just paste this to the `.eslintrc.js` in the root of your project:
+
+```javascript
+exports = module.exports = {
+  'extends': [
+    'eslint-config-volebo',
+  ],
+}
+```
+
+### Old `eslint` versions
+
+Long time ago `eslint` didn't have such a good support of shared configs, (see
+[this issue](https://github.com/eslint/eslint/issues/3458)), but now it does.
+
+If you are still using the old `eslint` this can help:
 
 ```javascript
 const path = require('path')
@@ -43,17 +59,6 @@ exports = module.exports = {
 }
 ```
 
-This version is much better, but it requires to install `eslint-config-volebo` **globally**
-(for details, read comments to [this issue](https://github.com/eslint/eslint/issues/3458))
-
-```javascript
-exports = module.exports = {
-  'extends': [
-    'volebo',
-  ],
-}
-```
-
 ## License
 
-Please, follow the link: [LICENSE](LICENSE)
+[LICENSE here](LICENSE)
