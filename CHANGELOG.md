@@ -34,6 +34,31 @@
 >
 --------------------------------------------------------------------------------
 
+## [3.0.0] - 2022-12-19
+
+### Added
+
+- tests with mocha using programmatic `eslint`
+
+### Changed
+
+**Rules**:
+
+- `no-tabs`: off // because we use tabs in the middle of the LOC
+- `indent`: error // now it generates ERROR
+- `no-var`: error // yep, no more vars
+- `no-const-assign`: error // why not?
+- `no-console`: error  // now it is an error. To automatically decline
+  contributions (on Travis level) with `console.log` in the PR
+- `no-alert`: error // just the same as `no-console`
+- `no-param-reassign`: error  // preventing side effects
+
+**ALSO (non rules)**:
+
+- add `parserOptions.ecmaVersion` (by default we use js.es9 == es2018)
+
+--------------------------------------------------------------------------------
+
 ## [2.3.5] - 2020-07-13
 ## [2.3.4] - 2020-07-13
 
