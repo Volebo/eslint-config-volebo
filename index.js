@@ -47,6 +47,13 @@ exports = module.exports = {
 		'es6': true,
 	},
 
+	parserOptions: {
+		// https://kangax.github.io/compat-table/es2016plus/https://kangax.github.io/compat-table/es2016plus/
+		ecmaVersion: 9,
+
+		// sourceType: 'module',
+	},
+
 	rules: {
 		// Override any settings from the 'parent' configuration
 		'comma-dangle' : ['error', 'only-multiline'],  // TODO: review this rule
@@ -55,7 +62,13 @@ exports = module.exports = {
 		/* CODE STYLE */
 		'dot-notation': 'off',
 
-		'indent': ['warn', 'tab'],
+		'indent': [
+			'error',
+			'tab',
+			{
+				'SwitchCase': 1,
+			}
+		],
 		'new-cap': ['warn'],
 		'no-extra-parens': ['warn', 'all', { 'nestedBinaryExpressions': false }],
 		'curly': 'error',
@@ -71,6 +84,7 @@ exports = module.exports = {
 				allowTemplateLiterals: true,
 			},
 		],
+		'no-tabs': 'off',
 
 		/* STATIC SECURITY */
 		'strict': ['error', 'global'],
@@ -105,9 +119,9 @@ exports = module.exports = {
 		'no-new': ['error'],
 
 		// variables definitions
-		'no-var': 'warn',
+		'no-var': 'error',
 		'prefer-const': ['warn', { /*'ignoreReadBeforeAssign' : false */ }],
-		'no-const-assign': 'warn',
+		'no-const-assign': 'error',
 		'no-use-before-define': ['error', { 'functions': false, 'classes': true }],
 		'no-undef': ['error', { 'typeof': true }],
 
@@ -118,11 +132,19 @@ exports = module.exports = {
 		'no-unused-vars' : ['error', { 'args': 'all', 'argsIgnorePattern': '(_|next|^__)' }],
 
 		/* SMELL */
-		'no-console': 'warn',
+		'no-console': 'error',  // use `debug` or other packages, or add explicit "eslint-ignore" for lines with console.xxx
+		'no-alert': 'error',
+
 		'no-plusplus': [
 			'error',
 			{
 				allowForLoopAfterthoughts: true,
+			},
+		],
+		'no-param-reassign': [
+			'error',
+			{
+				props: false,
 			},
 		],
 
