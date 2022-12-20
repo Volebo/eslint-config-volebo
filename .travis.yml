@@ -29,21 +29,19 @@
 
 sudo: false
 
+dist: focal
 language: node_js
 
 node_js:
   - 16
   - 18
+  - stable
 
 cache:
   directories:
     - node_modules
 
-before_install:
-  - npm config set spin false
-
 install:
-  - npm install -g npm  # update NPM
   - npm install -g eslint
   - npm install
 
@@ -58,8 +56,8 @@ deploy:
   email: dev@volebo.net
   on:
     tags: true
-    node_js: 18
-    repo: volebo/eslint-config-volebo
+    node_js: stable
+    repo: maxkoryukov/eslint-config-volebo
 
 after_deploy:
   # Send notification to Slack:
