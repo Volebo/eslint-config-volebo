@@ -14,9 +14,10 @@
 ```
 
 [![npm version](https://img.shields.io/npm/v/eslint-config-volebo.svg)](https://www.npmjs.com/package/eslint-config-volebo)
-[![Build Status](https://travis-ci.org/volebo/eslint-config-volebo.svg?branch=master)](https://travis-ci.org/volebo/eslint-config-volebo)
+[![Build Status](https://app.travis-ci.com/maxkoryukov/eslint-config-volebo.svg?branch=master)](https://app.travis-ci.com/maxkoryukov/eslint-config-volebo)
 [![npm downloads](https://img.shields.io/npm/dm/eslint-config-volebo.svg)](https://www.npmjs.com/package/eslint-config-volebo)
 [![Known Vulnerabilities](https://snyk.io/test/github/volebo/eslint-config-volebo/badge.svg)](https://snyk.io/test/github/volebo/eslint-config-volebo)
+
 
 Common style guide for all Volebo.Net projects
 
