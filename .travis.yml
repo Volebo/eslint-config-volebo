@@ -32,8 +32,6 @@ sudo: false
 language: node_js
 
 node_js:
-  - 12
-  - 14
   - 16
   - 18
 
@@ -45,7 +43,7 @@ before_install:
   - npm config set spin false
 
 install:
-  - npm install -g npm
+  - npm install -g npm  # update NPM
   - npm install -g eslint
   - npm install
 
